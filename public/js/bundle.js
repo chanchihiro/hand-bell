@@ -4,7 +4,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   console.log('DOM読み込んだよ');
   var target = document.getElementById('handBell__sound');
-  console.log(target);
   target.addEventListener('click', sound, false);
   function sound() {
     var sound = document.getElementById('sound-file');
@@ -15,6 +14,23 @@ document.addEventListener('DOMContentLoaded', function () {
       sound.currentTime = 0;
     }
   }
+
+  //加速度の部分
+  window.addEventListener("devicemotion", function (event) {
+    var x = parseFloat(event.acceleration.x);
+    var y = parseFloat(event.acceleration.y);
+    var z = parseFloat(event.acceleration.z);
+    var moji = document.getElementById('acc-x');
+    moji.textContent = x;
+    console.log(x);
+
+    // アイフォンの向きをアンドロイドに揃える
+    if (userAgent.indexOf("iPhone") > 0 || userAgent.indexOf("iPad") > 0 || userAgent.indexOf("iPod") > 0) {
+      x *= -1;
+      y *= -1;
+      z *= -1;
+    }
+  });
 });
 
 },{}]},{},[1]);

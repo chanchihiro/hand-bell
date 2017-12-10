@@ -24,8 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     moji.textContent = x;
 
     if (x > 1) {
-      sound.play();
-      sound.currentTime = 0;
+      sound();
     }
 
     // アイフォンの向きをアンドロイドに揃える

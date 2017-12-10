@@ -1,0 +1,557 @@
+@font-face {
+  font-family: copper;
+  src: url(../font/Copperplate.ttc) format("opentype"); }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+.p-v-005 {
+  padding: 0.5rem 0rem; }
+
+.p-v-01 {
+  padding: 1rem 0rem; }
+
+.p-v-02 {
+  padding: 2rem 0rem; }
+
+.p-v-03 {
+  padding: 3rem 0rem; }
+
+.p-v-04 {
+  padding: 4rem 0rem; }
+
+.p-v-05 {
+  padding: 5rem 0rem; }
+
+.p-v-06 {
+  padding: 6rem 0rem; }
+
+.p-v-07 {
+  padding: 7rem 0rem; }
+
+.p-v-08 {
+  padding: 8rem 0rem; }
+
+.p-s-01 {
+  padding: 0rem 1rem; }
+
+.p-s-02 {
+  padding: 0rem 2rem; }
+
+.p-s-03 {
+  padding: 0rem 3rem; }
+
+.p-s-04 {
+  padding: 0rem 4rem; }
+
+.p-s-05 {
+  padding: 0rem 5rem; }
+
+.p-s-06 {
+  padding: 0rem 6rem; }
+
+.p-s-07 {
+  padding: 0rem 7rem; }
+
+.p-s-08 {
+  padding: 0rem 8rem; }
+
+.p-vs-01 {
+  padding: 1rem 1rem; }
+
+.p-vs-02 {
+  padding: 2rem 2rem; }
+
+.p-vs-03 {
+  padding: 3rem 3rem; }
+
+.p-vs-04 {
+  padding: 4rem 4rem; }
+
+.p-vs-05 {
+  padding: 5rem 5rem; }
+
+.p-vs-06 {
+  padding: 6rem 6rem; }
+
+.p-vs-07 {
+  padding: 7rem 7rem; }
+
+.p-vs-08 {
+  padding: 8rem 8rem; }
+
+body {
+  font-family: "hiragino", serif;
+  font-size: 14px;
+  background-color: #fff;
+  color: #292929; }
+  @media screen and (max-width: 750px) {
+    body {
+      font-size: 12px; } }
+
+#manna_top_bg_gray {
+  position: absolute;
+  width: 100%;
+  top: 440px;
+  height: 760px;
+  background-color: #e6e6e6;
+  z-index: -10; }
+
+#manna_main {
+  width: 980px;
+  margin: 0 auto; }
+  #manna_main #manna_header {
+    margin-top: 88px;
+    overflow: hidden;
+    margin-bottom: 24px; }
+    #manna_main #manna_header #title_logo {
+      width: 260px;
+      float: left; }
+      #manna_main #manna_header #title_logo a {
+        display: block; }
+        #manna_main #manna_header #title_logo a img {
+          width: 100%; }
+    #manna_main #manna_header #menu_list {
+      float: right;
+      font-family: copper;
+      font-size: 18px; }
+      #manna_main #manna_header #menu_list ul li {
+        float: left;
+        list-style-type: none; }
+        #manna_main #manna_header #menu_list ul li a {
+          text-decoration: none;
+          color: #292929;
+          margin-left: 20px; }
+  #manna_main #manna_message {
+    text-align: center; }
+    #manna_main #manna_message img {
+      width: 100%; }
+    #manna_main #manna_message #manna_text_message {
+      padding-top: 56px;
+      padding-bottom: 36px; }
+      #manna_main #manna_message #manna_text_message h2 {
+        padding-bottom: 56px;
+        font-size: 24px; }
+      #manna_main #manna_message #manna_text_message p {
+        line-height: 44px;
+        margin-bottom: 56px; }
+      #manna_main #manna_message #manna_text_message a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px 22px;
+        background-color: #F2C0BD;
+        font-family: copper; }
+  #manna_main .manna_block {
+    margin-top: 120px; }
+    #manna_main .manna_block .title_heading {
+      margin-bottom: 20px;
+      font-size: 30px;
+      font-family: copper; }
+  #manna_main #manna_block_news {
+    overflow: hidden;
+    margin-top: 108px; }
+    #manna_main #manna_block_news #manna_feed_news {
+      margin-bottom: 8px; }
+      #manna_main #manna_block_news #manna_feed_news dl {
+        overflow: hidden;
+        margin-bottom: 12px; }
+        #manna_main #manna_block_news #manna_feed_news dl dt {
+          float: left;
+          clear: left;
+          margin-right: 52px;
+          font-family: copper; }
+        #manna_main #manna_block_news #manna_feed_news dl dd {
+          float: left;
+          margin-right: 52px; }
+  #manna_main #manna_block_news_2 {
+    overflow: hidden;
+    margin-top: 120px; }
+    #manna_main #manna_block_news_2 #manna_feed_news_2 {
+      overflow: hidden; }
+      #manna_main #manna_block_news_2 #manna_feed_news_2 dl {
+        width: 100%; }
+        #manna_main #manna_block_news_2 #manna_feed_news_2 dl dt {
+          font-size: 18px;
+          margin-bottom: 12px; }
+        #manna_main #manna_block_news_2 #manna_feed_news_2 dl dd {
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 32px; }
+      #manna_main #manna_block_news_2 #manna_feed_news_2 p {
+        padding-bottom: 60px;
+        margin-bottom: 60px;
+        border-bottom: 1px solid #aeaeae;
+        line-height: 24px; }
+        #manna_main #manna_block_news_2 #manna_feed_news_2 p:last-child {
+          border: none;
+          margin-bottom: 0; }
+  #manna_main #manna_block_blog {
+    overflow: hidden; }
+    #manna_main #manna_block_blog #manna_feed_blog {
+      overflow: hidden; }
+      #manna_main #manna_block_blog #manna_feed_blog .blog_first dt {
+        margin-bottom: 20px;
+        background-color: #e6e6e6;
+        width: 440px;
+        height: 330px; }
+      #manna_main #manna_block_blog #manna_feed_blog dl {
+        width: 440px;
+        float: left; }
+        #manna_main #manna_block_blog #manna_feed_blog dl dd {
+          margin-bottom: 12px; }
+        #manna_main #manna_block_blog #manna_feed_blog dl .title_blog {
+          font-size: 18px;
+          font-weight: bold; }
+        #manna_main #manna_block_blog #manna_feed_blog dl .title_blog_sub {
+          font-weight: bold; }
+      #manna_main #manna_block_blog #manna_feed_blog .blog_first {
+        padding-right: 49px;
+        border-right: 1px #AFAFAF solid; }
+      #manna_main #manna_block_blog #manna_feed_blog .blog_sub {
+        float: left;
+        padding-left: 50px;
+        margin-top: 18px; }
+        #manna_main #manna_block_blog #manna_feed_blog .blog_sub:nth-child(2) {
+          margin-top: 0px; }
+        #manna_main #manna_block_blog #manna_feed_blog .blog_sub dt {
+          float: left;
+          width: 182px;
+          height: 130px;
+          background-color: #e6e6e6;
+          margin-right: 18px;
+          margin-bottom: 14px; }
+      #manna_main #manna_block_blog #manna_feed_blog hr {
+        width: 440px;
+        float: right;
+        background-color: #AFAFAF;
+        box-shadow: none;
+        border: none;
+        height: 1px; }
+  #manna_main #manna_block_blog_2 {
+    overflow: hidden; }
+    #manna_main #manna_block_blog_2 #manna_feed_blog_2 {
+      overflow: hidden; }
+      #manna_main #manna_block_blog_2 #manna_feed_blog_2 dl {
+        width: 228px;
+        float: left;
+        margin-right: 22px;
+        margin-bottom: 36px; }
+        #manna_main #manna_block_blog_2 #manna_feed_blog_2 dl:nth-child(4n) {
+          margin-right: 0; }
+        #manna_main #manna_block_blog_2 #manna_feed_blog_2 dl dt {
+          margin-bottom: 8px;
+          width: 228px;
+          height: 161px;
+          background-color: #e6e6e6; }
+        #manna_main #manna_block_blog_2 #manna_feed_blog_2 dl dd {
+          margin-bottom: 4px; }
+  #manna_main #manna_block_order {
+    overflow: hidden; }
+    #manna_main #manna_block_order .text_order {
+      text-align: center;
+      margin-bottom: 64px; }
+    #manna_main #manna_block_order #manna_feed_food {
+      overflow: hidden; }
+      #manna_main #manna_block_order #manna_feed_food dt {
+        width: 300px;
+        height: 180px;
+        background-color: #e6e6e6;
+        background-image: url(); }
+      #manna_main #manna_block_order #manna_feed_food dl {
+        width: 300px;
+        float: left;
+        margin-right: 40px;
+        margin-bottom: 38px; }
+        #manna_main #manna_block_order #manna_feed_food dl:nth-child(3n) {
+          margin-right: 0; }
+        #manna_main #manna_block_order #manna_feed_food dl dt {
+          margin-bottom: 8px; }
+        #manna_main #manna_block_order #manna_feed_food dl dd {
+          margin-bottom: 4px; }
+        #manna_main #manna_block_order #manna_feed_food dl .order_1 {
+          background-image: url(../img/top_order_above1.jpg);
+          background-size: cover;
+          background-position: 0 -13px; }
+        #manna_main #manna_block_order #manna_feed_food dl .order_2 {
+          background-image: url(../img/top_order_above2.jpg);
+          background-size: cover;
+          background-position: 0 -13px; }
+        #manna_main #manna_block_order #manna_feed_food dl .order_3 {
+          background-image: url(../img/top_order_above3.jpg);
+          background-size: cover;
+          background-position: 0 -13px; }
+        #manna_main #manna_block_order #manna_feed_food dl .order_4 {
+          background-image: url(../img/top_order_above4.jpg);
+          background-size: cover;
+          background-position: 0 -8px; }
+        #manna_main #manna_block_order #manna_feed_food dl .order_5 {
+          background-image: url(../img/top_order_above5.jpg);
+          background-size: cover;
+          background-position: 0 -13px; }
+        #manna_main #manna_block_order #manna_feed_food dl .order_6 {
+          background-image: url(../img/top_order_above6.jpg);
+          background-size: cover;
+          background-position: 0 -13px; }
+        #manna_main #manna_block_order #manna_feed_food dl .order_7 {
+          background-image: url(../img/top_order_above7.jpg);
+          background-size: cover;
+          background-position: 0 -8px; }
+        #manna_main #manna_block_order #manna_feed_food dl .order_8 {
+          background-image: url(../img/top_order_above8.jpg);
+          background-size: cover;
+          background-position: 0 -13px; }
+        #manna_main #manna_block_order #manna_feed_food dl .order_9 {
+          background-image: url(../img/top_order_above9.jpg);
+          background-size: cover;
+          background-position: 0 -13px; }
+  #manna_main #manna_block_contact {
+    margin-top: 120px; }
+    #manna_main #manna_block_contact .text_contact {
+      text-align: center;
+      line-height: 24px;
+      margin-bottom: 40px; }
+    #manna_main #manna_block_contact .manna_form label {
+      display: block;
+      margin-top: 16px;
+      color: #777; }
+    #manna_main #manna_block_contact .manna_form input {
+      width: 100%;
+      height: 32px; }
+    #manna_main #manna_block_contact .manna_form textarea {
+      width: 100%;
+      height: 152px; }
+    #manna_main #manna_block_contact .manna_form button {
+      width: 100%;
+      border: none;
+      outline: none;
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
+      padding: 13px 0px;
+      color: #fff; }
+  #manna_main #manna_block_about {
+    margin-top: 120px; }
+    #manna_main #manna_block_about h3 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px; }
+    #manna_main #manna_block_about #manna_description {
+      width: 632px;
+      margin: 0px auto; }
+      #manna_main #manna_block_about #manna_description .desc_left {
+        float: left;
+        font-size: 12px;
+        margin-right: 72px;
+        line-height: 23px; }
+      #manna_main #manna_block_about #manna_description .desc_right {
+        float: left;
+        font-size: 12px;
+        line-height: 21px; }
+  #manna_main .clear {
+    clear: both; }
+
+#manna_bg_slant {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 160px; }
+  #manna_bg_slant #manna_slant {
+    background-color: #F2C0BD;
+    width: 140%;
+    height: 760px;
+    top: 280px;
+    left: -300px;
+    position: absolute;
+    -webkit-transform: rotate(-12deg);
+    transform: rotate(-12deg);
+    z-index: -10; }
+  #manna_bg_slant #manna_main {
+    overflow: hidden; }
+    #manna_bg_slant #manna_main #manna_about_right {
+      float: right;
+      width: 520px;
+      box-sizing: border-box;
+      margin-bottom: 240px;
+      position: relative;
+      padding-top: 100px; }
+      #manna_bg_slant #manna_main #manna_about_right #manna_right_image {
+        position: absolute;
+        width: 570px;
+        height: 360px;
+        z-index: -5;
+        right: 400px;
+        top: 50px; }
+      #manna_bg_slant #manna_main #manna_about_right .title_about_sub {
+        font-size: 60px;
+        margin-bottom: 20px;
+        line-height: 40px;
+        color: #fff;
+        font-weight: normal; }
+      #manna_bg_slant #manna_main #manna_about_right .about_sub_desc {
+        color: #fff;
+        padding: 28px;
+        background-color: #F28F8A; }
+        #manna_bg_slant #manna_main #manna_about_right .about_sub_desc h3 {
+          font-size: 28px;
+          margin-bottom: 24px; }
+    #manna_bg_slant #manna_main #manna_about_left {
+      float: left;
+      width: 520px;
+      box-sizing: border-box;
+      position: relative; }
+      #manna_bg_slant #manna_main #manna_about_left #manna_left_image {
+        position: absolute;
+        width: 570px;
+        height: 360px;
+        z-index: -5;
+        left: 400px;
+        top: -60px; }
+      #manna_bg_slant #manna_main #manna_about_left .title_about_sub {
+        font-size: 60px;
+        margin-bottom: 20px;
+        line-height: 40px;
+        color: #fff;
+        font-weight: normal; }
+      #manna_bg_slant #manna_main #manna_about_left .about_sub_desc {
+        color: #fff;
+        padding: 28px;
+        background-color: #F28F8A; }
+        #manna_bg_slant #manna_main #manna_about_left .about_sub_desc h3 {
+          font-size: 28px;
+          margin-bottom: 24px; }
+  #manna_bg_slant #about_info {
+    width: 640px;
+    padding-top: 120px;
+    margin: 0px auto;
+    overflow: hidden; }
+    #manna_bg_slant #about_info h4 {
+      text-align: center;
+      font-weight: normal;
+      margin-bottom: 40px;
+      font-size: 16px; }
+    #manna_bg_slant #about_info #about_info_right {
+      float: left;
+      margin-right: 80px; }
+      #manna_bg_slant #about_info #about_info_right h5 {
+        font-weight: normal;
+        margin-bottom: 8px; }
+      #manna_bg_slant #about_info #about_info_right p {
+        line-height: 23px; }
+    #manna_bg_slant #about_info #about_info_left {
+      float: left; }
+      #manna_bg_slant #about_info #about_info_left h5 {
+        font-weight: normal;
+        margin-bottom: 8px; }
+      #manna_bg_slant #about_info #about_info_left p {
+        line-height: 23px; }
+  #manna_bg_slant #gmap_ct {
+    margin-top: 56px;
+    width: 100%;
+    height: 360px; }
+
+#manna_hero_about {
+  width: 100%;
+  height: 380px;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  font-size: 48px;
+  background-size: cover;
+  background-image: url(../img/hero2.jpg);
+  background-position: 0 -290px; }
+  #manna_hero_about h3 {
+    padding-top: 160px;
+    text-shadow: 3px 3px 9px #000; }
+
+#manna_hero_news {
+  width: 100%;
+  height: 380px;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  font-size: 48px;
+  background-size: cover;
+  background-image: url(../img/hero4.jpg);
+  background-position: 0 -230px; }
+  #manna_hero_news h3 {
+    padding-top: 160px;
+    text-shadow: 3px 3px 9px #000; }
+
+#manna_hero_order {
+  width: 100%;
+  height: 380px;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  font-size: 48px;
+  background-size: cover;
+  background-image: url(../img/hero3.jpg); }
+  #manna_hero_order h3 {
+    padding-top: 160px;
+    text-shadow: 3px 3px 9px #000; }
+
+#manna_hero_blog {
+  width: 100%;
+  height: 380px;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  font-size: 48px;
+  background-size: cover;
+  background-image: url(../img/hero1.jpg);
+  background-position: 0 -320px; }
+  #manna_hero_blog h3 {
+    padding-top: 160px;
+    text-shadow: 3px 3px 9px #000; }
+
+#manna_hero_contact {
+  width: 100%;
+  height: 380px;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  font-size: 48px;
+  background-size: cover;
+  background-image: url(../img/hero5.jpg); }
+  #manna_hero_contact h3 {
+    padding-top: 160px;
+    text-shadow: 3px 3px 9px #000; }
+
+.manna_btn_seemore_right {
+  float: right;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 22px;
+  background-color: #F2C0BD;
+  font-family: copper;
+  font-size: 14px; }
+
+.copper {
+  font-family: copper; }
+
+footer {
+  width: 100%;
+  bottom: 8px;
+  margin-top: 124px;
+  margin-bottom: 12px; }
+  footer p {
+    text-align: center; }
+  footer #manna_sns {
+    width: 118px;
+    margin: 8px auto 20px;
+    overflow: hidden; }
+    footer #manna_sns a {
+      display: block;
+      float: left;
+      margin: 0px 5px 5px 0px;
+      padding: 0px;
+      color: #fff; }
+      footer #manna_sns a i {
+        width: 30px;
+        height: 30px;
+        margin: 0px 2px;
+        border-radius: 50%;
+        line-height: 30px;
+        text-align: center;
+        background-color: #F2C0BD; }

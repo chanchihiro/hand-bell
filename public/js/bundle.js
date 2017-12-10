@@ -2,9 +2,7 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
-  console.log('DOM読み込んだよ');
-  var target = document.getElementById('handBell__sound');
-  target.addEventListener('click', sound, false);
+  var bell_target = document.getElementById('handBell__sound');
   function sound() {
     var sound = document.getElementById('sound-file');
     sound.play();
@@ -15,18 +13,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  bell_target.addEventListener('click', sound, false);
+
   //加速度の部分
   window.addEventListener("devicemotion", function (event) {
     var x = parseFloat(event.acceleration.x);
     var y = parseFloat(event.acceleration.y);
     var z = parseFloat(event.acceleration.z);
-    var moji = document.getElementById('acc-x');
-    moji.textContent = x;
 
-    if (x > 1) {
+    // 横に振ったらベルが鳴る
+    if (x > 4) {
       sound();
     }
-
+    // 奥に振ったら色が変わる
+    if (y > 10) {
+      if (target.classList.contains('handBell__sectionRed')) {
+        bell_target.classList.add('handBell__sectionBlue');
+        bell_target.classList.remove('handBell__sectionRed');
+      } else if (target.classList.contains('handBell__sectionBlue')) {
+        bell_target.classList.add('handBell__sectionRed');
+        bell_target.classList.remove('handBell__sectionBlue');
+      }
+    }
     // アイフォンの向きをアンドロイドに揃える
     if (userAgent.indexOf("iPhone") > 0 || userAgent.indexOf("iPad") > 0 || userAgent.indexOf("iPod") > 0) {
       x *= -1;

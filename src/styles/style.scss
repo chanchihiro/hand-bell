@@ -1,7 +1,11 @@
 //ファイルのインポート
 @import "lib/base";
-@import "lib/layout";
 @import "lib/mixins"; //ブレイクポイントの設定
+
+* {
+	margin: 0;
+	padding: 0;
+}
 
 body {
 	font-family: "hiragino", serif;
@@ -31,10 +35,15 @@ body {
 	display: none;
 	@include max-screen($breakpoint-mobile) {
 		display: block;
-		.handBell__sectionColor {
-			background-color: red;
+		#handBell__sound {
 			width: 100%;
 			height: 80vh;
+		}
+		.handBell__sectionRed {
+			background-color: red;
+		}
+		.handBell__sectionBlue {
+			background-color: blue;
 		}
 	}
 }

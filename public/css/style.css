@@ -39,6 +39,18 @@ body {
         background-color: red; }
       .handBell__sectionContent .handBell__sectionBlue {
         background-color: blue; }
+      .handBell__sectionContent .handBell__sectionYellow {
+        background-color: yellow; }
+      .handBell__sectionContent .handBell__sectionBlack {
+        background-color: black; }
+      .handBell__sectionContent .handBell__sectionWhite {
+        background-color: white; }
+      .handBell__sectionContent .handBell__sectionPurple {
+        background-color: purple; }
+      .handBell__sectionContent .handBell__sectionGreen {
+        background-color: green; }
+      .handBell__sectionContent .handBell__sectionAzure {
+        background-color: azure; }
       .handBell__sectionContent #btn {
         background-color: #333;
         color: #fff;

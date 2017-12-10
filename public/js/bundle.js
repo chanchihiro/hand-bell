@@ -16,13 +16,30 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function change_color() {
-    console.log("反応があります");
     if (bell_target.classList.contains('handBell__sectionRed')) {
       bell_target.classList.add('handBell__sectionBlue');
       bell_target.classList.remove('handBell__sectionRed');
     } else if (bell_target.classList.contains('handBell__sectionBlue')) {
-      bell_target.classList.add('handBell__sectionRed');
+      bell_target.classList.add('handBell__sectionYellow');
       bell_target.classList.remove('handBell__sectionBlue');
+    } else if (bell_target.classList.contains('handBell__sectionYellow')) {
+      bell_target.classList.add('handBell__sectionBlack');
+      bell_target.classList.remove('handBell__sectionYellow');
+    } else if (bell_target.classList.contains('handBell__sectionBlack')) {
+      bell_target.classList.add('handBell__sectionWhite');
+      bell_target.classList.remove('handBell__sectionBlack');
+    } else if (bell_target.classList.contains('handBell__sectionWhite')) {
+      bell_target.classList.add('handBell__sectionPurple');
+      bell_target.classList.remove('handBell__sectionWhite');
+    } else if (bell_target.classList.contains('handBell__sectionPurple')) {
+      bell_target.classList.add('handBell__sectionGreen');
+      bell_target.classList.remove('handBell__sectionPurple');
+    } else if (bell_target.classList.contains('handBell__sectionGreen')) {
+      bell_target.classList.add('handBell__sectionAzure');
+      bell_target.classList.remove('handBell__sectionGreen');
+    } else if (bell_target.classList.contains('handBell__sectionAzure')) {
+      bell_target.classList.add('handBell__sectionRed');
+      bell_target.classList.remove('handBell__sectionAzure');
     }
   }
 
@@ -42,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
       sound();
     }
     // 奥に振ったら色が変わる
-    if (y > 10) {
+    if (y > 8) {
       change_color();
     }
     // アイフォンの向きをアンドロイドに揃える

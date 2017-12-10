@@ -22,7 +22,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var z = parseFloat(event.acceleration.z);
     var moji = document.getElementById('acc-x');
     moji.textContent = x;
-    console.log(x);
+
+    if (x > 1) {
+      sound.play();
+      sound.currentTime = 0;
+    }
 
     // アイフォンの向きをアンドロイドに揃える
     if (userAgent.indexOf("iPhone") > 0 || userAgent.indexOf("iPad") > 0 || userAgent.indexOf("iPod") > 0) {

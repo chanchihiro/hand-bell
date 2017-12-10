@@ -1,11 +1,7 @@
 //ファイルのインポート
 @import "lib/base";
+@import "lib/reset";
 @import "lib/mixins"; //ブレイクポイントの設定
-
-* {
-	margin: 0;
-	padding: 0;
-}
 
 body {
 	font-family: "hiragino", serif;

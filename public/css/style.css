@@ -38,7 +38,13 @@ body {
       .handBell__sectionContent .handBell__sectionRed {
         background-color: red; }
       .handBell__sectionContent .handBell__sectionBlue {
-        background-color: blue; } }
+        background-color: blue; }
+      .handBell__sectionContent #btn {
+        background-color: #333;
+        color: #fff;
+        text-align: center; }
+        .handBell__sectionContent #btn p {
+          padding: 2em; } }
 
 footer {
   width: 100%;

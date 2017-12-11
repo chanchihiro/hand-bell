@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   let bell_target = document.getElementById('handBell__sound');
-  let button = document.getElementById('btn');
+  // let button = document.getElementById('btn');
   let soundData = document.getElementById('sound-file');
 
   function sound() {
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   bell_target.addEventListener('click', sound, false);
-  btn.addEventListener('click', change_color_sound, false);
+  // btn.addEventListener('click', change_color_sound, false);
 
   //加速度の部分
   window.addEventListener("devicemotion", function(event) {

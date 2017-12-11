@@ -3,20 +3,38 @@ block title
  title= "ハンドベル"
 block body
  .handBell
-   .handBell__pcView
-    p こちらのサイトはスマホサイト限定になります。
-    p 下記URLから接続するか、バーコードを読み取ってご利用ください。
-    p https://hand-bell.netlify.com
-    img(src="img/qrcode.png", alt="QRコード")
-   .handBell__sectionContent
-    #handBell__sound.handBell__sectionRed
-     p#acc-x
-     p#acc-y
-    audio#sound-file(preload="auto")
-     source(src="../se/bell.mp3")
-    audio#sound-file2(preload="auto")
-     source(src="../se/bell2.mp3")
-    #btn
-     p 音色を切り替える
+  .handBell__pcView
+   p こちらのサイトはスマホサイト限定になります。
+   p 下記URLから接続するか、バーコードを読み取ってご利用ください。
+   p https://hand-bell.netlify.com
+   img(src="img/qrcode.png", alt="QRコード")
+  .handBell__sectionContent
+   .handBell__section__selectColor
+    p 色を選択してください。
+    ul.handBell__colors
+     li(style="background:red")
+      a(href="red.html")
+     li(style="background:blue")
+      a(href="blue.html")
+     li(style="background:yellow")
+      a(href="yellow.html")
+     li(style="background:purple")
+      a(href="purple.html")
+     li(style="background:white")
+      a(href="white.html")
+     li(style="background:black")
+      a(href="black.html")
+     li(style="background:azure")
+      a(href="azure.html")
+     li(style="background:green")
+      a(href="green.html")
+     li(style="background:orange")
+      a(href="orange.html")
+     li(style="background:skyblue")
+      a(href="skyblue.html")
+     li(style="background:orange")
+      a(href="orange.html")
+     li(style="background:skyblue")
+      a(href="skyblue.html")
  include _footer
  include _script

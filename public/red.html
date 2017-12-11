@@ -12,7 +12,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/favicon.png">
-    <title>ハンドベル</title>
+    <title>ハンドベル | 赤</title>
   </head>
   <body>
     <div class="handBell">
@@ -22,23 +22,13 @@
         <p>https://hand-bell.netlify.com</p><img src="img/qrcode.png" alt="QRコード">
       </div>
       <div class="handBell__sectionContent">
-        <div class="handBell__section__selectColor">
-          <p>色を選択してください。</p>
-          <ul class="handBell__colors">
-            <li style="background:red"><a href="red.html"></a></li>
-            <li style="background:blue"><a href="blue.html"></a></li>
-            <li style="background:yellow"><a href="yellow.html"></a></li>
-            <li style="background:purple"><a href="purple.html"></a></li>
-            <li style="background:white"><a href="white.html"></a></li>
-            <li style="background:black"><a href="black.html"></a></li>
-            <li style="background:azure"><a href="azure.html"></a></li>
-            <li style="background:green"><a href="green.html"></a></li>
-            <li style="background:orange"><a href="orange.html"></a></li>
-            <li style="background:skyblue"><a href="skyblue.html"></a></li>
-            <li style="background:orange"><a href="orange.html"></a></li>
-            <li style="background:skyblue"><a href="skyblue.html"></a></li>
-          </ul>
+        <div id="handBell__sound" class="handBell__sectionRed">
+          <p id="acc-x"></p>
+          <p id="acc-y"></p><img src="img/handbell.png" alt="ベル" class="handbell__image">
         </div>
+        <audio id="sound-file" preload="auto">
+          <source src="../se/bell.mp3">
+        </audio>
       </div>
     </div>
     <footer>

@@ -15,41 +15,43 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 		}
 
-		function change_color_sound() {
-				if (bell_target.classList.contains('handBell__sectionRed')) {
-						bell_target.classList.add('handBell__sectionBlue');
-						bell_target.classList.remove('handBell__sectionRed');
-						soundData = document.getElementById('sound-file2');
-				} else if (bell_target.classList.contains('handBell__sectionBlue')) {
-						bell_target.classList.add('handBell__sectionYellow');
-						bell_target.classList.remove('handBell__sectionBlue');
-						soundData = document.getElementById('sound-file');
-				} else if (bell_target.classList.contains('handBell__sectionYellow')) {
-						bell_target.classList.add('handBell__sectionBlack');
-						bell_target.classList.remove('handBell__sectionYellow');
-						soundData = document.getElementById('sound-file2');
-				} else if (bell_target.classList.contains('handBell__sectionBlack')) {
-						bell_target.classList.add('handBell__sectionWhite');
-						bell_target.classList.remove('handBell__sectionBlack');
-						soundData = document.getElementById('sound-file');
-				} else if (bell_target.classList.contains('handBell__sectionWhite')) {
-						bell_target.classList.add('handBell__sectionPurple');
-						bell_target.classList.remove('handBell__sectionWhite');
-						soundData = document.getElementById('sound-file2');
-				} else if (bell_target.classList.contains('handBell__sectionPurple')) {
-						bell_target.classList.add('handBell__sectionGreen');
-						bell_target.classList.remove('handBell__sectionPurple');
-						soundData = document.getElementById('sound-file');
-				} else if (bell_target.classList.contains('handBell__sectionGreen')) {
-						bell_target.classList.add('handBell__sectionAzure');
-						bell_target.classList.remove('handBell__sectionGreen');
-						soundData = document.getElementById('sound-file2');
-				} else if (bell_target.classList.contains('handBell__sectionAzure')) {
-						bell_target.classList.add('handBell__sectionRed');
-						bell_target.classList.remove('handBell__sectionAzure');
-						soundData = document.getElementById('sound-file');
-				}
-		}
+		/*
+    function change_color_sound() {
+  	if(bell_target.classList.contains('handBell__sectionRed')) {
+  	  bell_target.classList.add('handBell__sectionBlue');
+  	  bell_target.classList.remove('handBell__sectionRed');
+  	  soundData = document.getElementById('sound-file2');
+  	} else if(bell_target.classList.contains('handBell__sectionBlue')){
+  	  bell_target.classList.add('handBell__sectionYellow');
+  	  bell_target.classList.remove('handBell__sectionBlue');
+  	  soundData = document.getElementById('sound-file');
+  	} else if(bell_target.classList.contains('handBell__sectionYellow')){
+  	  bell_target.classList.add('handBell__sectionBlack');
+  	  bell_target.classList.remove('handBell__sectionYellow');
+  	  soundData = document.getElementById('sound-file2');
+  	} else if(bell_target.classList.contains('handBell__sectionBlack')){
+  	  bell_target.classList.add('handBell__sectionWhite');
+  	  bell_target.classList.remove('handBell__sectionBlack');
+  	  soundData = document.getElementById('sound-file');
+  	} else if(bell_target.classList.contains('handBell__sectionWhite')){
+  	  bell_target.classList.add('handBell__sectionPurple');
+  	  bell_target.classList.remove('handBell__sectionWhite');
+  	  soundData = document.getElementById('sound-file2');
+  	} else if(bell_target.classList.contains('handBell__sectionPurple')){
+  	  bell_target.classList.add('handBell__sectionGreen');
+  	  bell_target.classList.remove('handBell__sectionPurple');
+  	  soundData = document.getElementById('sound-file');
+  	} else if(bell_target.classList.contains('handBell__sectionGreen')){
+  	  bell_target.classList.add('handBell__sectionAzure');
+  	  bell_target.classList.remove('handBell__sectionGreen');
+  	  soundData = document.getElementById('sound-file2');
+  	} else if(bell_target.classList.contains('handBell__sectionAzure')){
+  	  bell_target.classList.add('handBell__sectionRed');
+  	  bell_target.classList.remove('handBell__sectionAzure');
+  	  soundData = document.getElementById('sound-file');
+  	}
+    }
+  */
 
 		bell_target.addEventListener('click', sound, false);
 		// btn.addEventListener('click', change_color_sound, false);

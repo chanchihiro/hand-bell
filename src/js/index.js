@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
   }
 
+/*
   function change_color_sound() {
 	if(bell_target.classList.contains('handBell__sectionRed')) {
 	  bell_target.classList.add('handBell__sectionBlue');
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	  soundData = document.getElementById('sound-file');
 	}
   }
+*/
 
   bell_target.addEventListener('click', sound, false);
   // btn.addEventListener('click', change_color_sound, false);

@@ -67,16 +67,42 @@ body {
 				padding: 2em;
 			}
 		}
+		.handBell_howTo {
+			text-align: center;
+			padding-top: 2em;
+			h2 {
+				font-size: 1.6em;
+				margin-bottom: 10px;
+			}
+			p {
+				margin-bottom: 8px;
+			}
+		}
 	}
 }
 
 footer {
 	width: 100%;
 	bottom: 8px;
-	margin-bottom: 12px;
 	position: absolute;
 	p {
 		text-align: center;
+	}
+	ul {
+		width: 120px;
+		margin: 0 auto;
+		overflow: hidden;
+		margin-bottom: 4px;
+		li {
+			text-align: center;
+			float: left;
+			width: 60px;
+			a {
+				text-decoration: none;
+				text-align: center;
+				color: #192f53;
+			}
+		}
 	}
 }
 

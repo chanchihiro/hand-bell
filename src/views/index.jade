@@ -1,22 +1,20 @@
 extends _head
 block title
- title= "manna bakery"
+ title= "ハンドベル"
 block body
  .handBell
    .handBell__pcView
     p こちらのサイトはスマホサイト限定になります。
     p 下記URLから接続するか、バーコードを読み取ってご利用ください。
-    p https://lifeistech.com/hand-bell
-    img(src="https://lh6.ggpht.com/ufwUy4SGVTqCs8fcp6Ajxfpae0bNImN1Rq2cXUjWI7jlmNMCsXgQE5C3yUEzBu5Gadkz=w300", alt="バーコード")
+    p https://hand-bell.netlify.com
+    img(src="img/qrcode.png", alt="QRコード")
    .handBell__sectionContent
     #handBell__sound.handBell__sectionRed
-     p#acc-x 
-     p#acc-y 
     audio#sound-file(preload="auto")
      source(src="../se/bell.mp3")
     audio#sound-file2(preload="auto")
      source(src="../se/bell2.mp3")
     #btn
-     p push
+     p 音色を切り替える
  include _footer
  include _script

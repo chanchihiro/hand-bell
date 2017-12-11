@@ -112,12 +112,32 @@ body {
         color: #fff;
         text-align: center; }
         .handBell__sectionContent #btn p {
-          padding: 2em; } }
+          padding: 2em; }
+      .handBell__sectionContent .handBell_howTo {
+        text-align: center;
+        padding-top: 2em; }
+        .handBell__sectionContent .handBell_howTo h2 {
+          font-size: 1.6em;
+          margin-bottom: 10px; }
+        .handBell__sectionContent .handBell_howTo p {
+          margin-bottom: 8px; } }
 
 footer {
   width: 100%;
   bottom: 8px;
-  margin-bottom: 12px;
   position: absolute; }
   footer p {
     text-align: center; }
+  footer ul {
+    width: 120px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 4px; }
+    footer ul li {
+      text-align: center;
+      float: left;
+      width: 60px; }
+      footer ul li a {
+        text-decoration: none;
+        text-align: center;
+        color: #192f53; }

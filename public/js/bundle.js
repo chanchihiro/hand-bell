@@ -116,7 +116,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 横に振ったらベルが鳴る
     if (x > 4) {
-      playSound(buffer);
+      getAudioBuffer('../se/bell.mp3', function (buffer) {
+        playSound(buffer);
+      });
     }
     // アイフォンの向きをアンドロイドに揃える
     if (userAgent.indexOf("iPhone") > 0 || userAgent.indexOf("iPad") > 0 || userAgent.indexOf("iPod") > 0) {

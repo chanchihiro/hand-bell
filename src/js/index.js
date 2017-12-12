@@ -85,6 +85,9 @@ document.addEventListener('DOMContentLoaded', function() {
   	source.buffer = buffer;
   	// contextにconnect
   	source.connect(context.destination);
+    // 2回鳴っちゃうのとかのロック時間を設定
+    // playing = true;
+    // window.setTimeout(function(){ playing = false; }, locktime);
   	// 再生
   	source.start(0);
   }
@@ -114,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('acc-y').textContent = y;
 
     // 横に振ったらベルが鳴る
-    if(x > 4) {
+    if(x > 10) {
     	getAudioBuffer('../se/bell.mp3', function(buffer) {
     		playSound(buffer);
     	})

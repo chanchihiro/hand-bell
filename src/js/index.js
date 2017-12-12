@@ -51,7 +51,58 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 */
 
-  bell_target.addEventListener('click', sound, false);
+  // Web Audio APIの部分を書いていく
+  // webkit をつけてクロスブラウザ対応する
+  window.AudioContext = window.AudioContext || window.webkitAudioContext;  
+  var context = new AudioContext();
+  // 音声用のbufferを読み込む
+  let getAudioBuffer = function(url, fn) {
+  	let req = new XMLHttpRequest();
+  	// arraybufferを指定する
+  	req.responseType = 'arraybuffer';
+
+  	req.onreadystatechange = function() {
+  	  if (req.readyState === 4) {
+  	  	if  (req.status === 0 || req.status === 200) {
+  	  		// array buffer を audio buffer に変換
+  	  		context.decodeAudioData(req.response, function(buffer) {
+  	  		  // コールバックを実行
+  	  		  fn(buffer);
+  	  		})
+  	  	}
+  	  } 
+  	};
+
+  	req.open('GET', url, true);
+  	req.send('');
+  };
+
+  // 音を再生
+  let playSound = function(buffer) {
+  	// sourceを作成
+  	let source = context.createBufferSource();
+  	// bufferをセット
+  	source.buffer = buffer;
+  	// contextにconnect
+  	source.connect(context.destination);
+  	// 再生
+  	source.start(0);
+  }
+
+  // 関数を発動
+  window.onload = function() {
+  	// 音を読み込む
+  	getAudioBuffer('../se/bell.mp3', function(buffer) {
+  	  // 読み込み完了後にボタンにクリックイベントを登録
+  	  bell_target.onclick = function() {
+  	  	// 音を再生
+  	  	playSound(buffer);
+  	  }
+  	});
+  }
+ 
+
+  // bell_target.addEventListener('click', sound, false);
   // btn.addEventListener('click', change_color_sound, false);
 
   //加速度の部分
@@ -64,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 横に振ったらベルが鳴る
     if(x > 4) {
-    	sound();
+    	playSound(buffer);
     }
     // アイフォンの向きをアンドロイドに揃える
     if (userAgent.indexOf("iPhone") > 0 || userAgent.indexOf("iPad") > 0 || userAgent.indexOf("iPod") > 0) {

@@ -1,0 +1,22 @@
+extends _head
+block title
+ title= "ハンドベル | 緑"
+ - var first = true;
+ - var notop = true;
+ - var second_color = "second_green.html"
+block body
+ .handBell
+  .handBell__pcView
+   p こちらのサイトはスマホサイト限定になります。
+   p 下記URLから接続するか、バーコードを読み取ってご利用ください。
+   p https://hand-bell.netlify.com
+   img(src="img/qrcode.png", alt="QRコード")
+  .handBell__sectionContent
+   #handBell__sound(style="background:#67b62d")
+    p#acc-x
+    p#acc-y
+    p.choice_first 一回目
+    div#circle
+    img.handbell__image(src="img/handbell.png" alt="ベル")
+ include _footer
+ include _script

@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('acc-y').textContent = y;
 
     // 横に振ったらベルが鳴る
-    if (x > 7) {
+    if (x > 20) {
       if (soundAble) {
         getAudioBuffer('../se/bell.mp3', function (buffer) {
           playSound(buffer);

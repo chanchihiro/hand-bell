@@ -115,11 +115,18 @@ body {
       .handBell__sectionContent #handBell__sound {
         width: 100%;
         height: 100vh; }
+        .handBell__sectionContent #handBell__sound .choice_first {
+          color: #fff;
+          font-size: 24px; }
+        .handBell__sectionContent #handBell__sound #circle {
+          width: 20px;
+          height: 20px;
+          margin: 0 auto;
+          border: 3px solid #fff;
+          border-radius: 100%; }
         .handBell__sectionContent #handBell__sound .handbell__image {
           width: 200px;
           margin-top: 10em; }
-      .handBell__sectionContent .handBell__sectionRed {
-        background-color: #e63c35; }
       .handBell__sectionContent #btn {
         background-color: #333;
         color: #fff;
@@ -153,9 +160,10 @@ footer {
       width: 100%;
       text-align: center;
       box-sizing: border-box;
-      margin-bottom: 10px;
-      padding: 20px 10px; }
+      margin-bottom: 10px; }
       footer ul li a {
         text-decoration: none;
         text-align: center;
-        color: #192f53; }
+        color: #192f53;
+        display: block;
+        padding: 20px 10px; }

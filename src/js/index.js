@@ -133,12 +133,12 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('acc-y').textContent = y;
 
     // 横に振ったらベルが鳴る
-    if(x > 14) {
+    if(x > 10) {
     	if(soundAble){
     		getAudioBuffer('../se/bell.mp3', function(buffer) {
     			playSound(buffer);
   	  			soundAble = false;
-  	  			setTimeout(switchable, 1000);
+  	  			setTimeout(switchable, 1500);
     		});
     	}
     }

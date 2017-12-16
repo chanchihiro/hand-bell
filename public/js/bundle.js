@@ -5,16 +5,26 @@ document.addEventListener('DOMContentLoaded', function () {
   var bell_target = document.getElementById('handBell__sound');
   // let button = document.getElementById('btn');
   var soundData = document.getElementById('sound-file');
+  var soundAble = true;
 
+  //音がなるように切り替える
+  var switchable = function switchable() {
+    soundAble = true;
+  };
+
+  //audioで音を鳴らすのに使ってた
+  /*
   function sound() {
-    soundData.play();
-    soundData.currentTime = 0;
-    // スマホに対応するために[currentTime]を認識した場合のみ、処理をする
-    if (typeof sound.currentTime != 'undefined') {
-      soundData.currentTime = 0;
-    }
+  	soundData.play();
+  	soundData.currentTime = 0 ;
+  	// スマホに対応するために[currentTime]を認識した場合のみ、処理をする
+  if( typeof( sound.currentTime ) != 'undefined' ){
+     soundData.currentTime = 0;
   }
+  }
+  */
 
+  //色と音を変える時に使っていたやつ
   /*
     function change_color_sound() {
   	if(bell_target.classList.contains('handBell__sectionRed')) {
@@ -51,6 +61,10 @@ document.addEventListener('DOMContentLoaded', function () {
   	  soundData = document.getElementById('sound-file');
   	}
     }
+  
+    // 発動する
+    // bell_target.addEventListener('click', sound, false);
+    // btn.addEventListener('click', change_color_sound, false);
   */
 
   // Web Audio APIの部分を書いていく
@@ -90,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // 2回鳴っちゃうのとかのロック時間を設定
     // playing = true;
     // window.setTimeout(function(){ playing = false; }, locktime);
+    source.loop = false;
     // 再生
     source.start(0);
   };
@@ -101,15 +116,16 @@ document.addEventListener('DOMContentLoaded', function () {
       // 読み込み完了後にボタンにクリックイベントを登録
       bell_target.onclick = function () {
         // 音を再生
-        playSound(buffer);
+        if (soundAble) {
+          playSound(buffer);
+          soundAble = false;
+          setTimeout(switchable, 1000);
+        }
       };
     });
   };
 
-  // bell_target.addEventListener('click', sound, false);
-  // btn.addEventListener('click', change_color_sound, false);
-
-  //加速度の部分
+  //加速度で音を鳴らす部分
   window.addEventListener("devicemotion", function (event) {
     var x = parseFloat(event.acceleration.x);
     var y = parseFloat(event.acceleration.y);
@@ -118,10 +134,14 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('acc-y').textContent = y;
 
     // 横に振ったらベルが鳴る
-    if (x > 10) {
-      getAudioBuffer('../se/bell.mp3', function (buffer) {
-        playSound(buffer);
-      });
+    if (x > 7) {
+      if (soundAble) {
+        getAudioBuffer('../se/bell.mp3', function (buffer) {
+          playSound(buffer);
+          soundAble = false;
+          setTimeout(switchable, 1000);
+        });
+      }
     }
     // アイフォンの向きをアンドロイドに揃える
     if (userAgent.indexOf("iPhone") > 0 || userAgent.indexOf("iPad") > 0 || userAgent.indexOf("iPod") > 0) {

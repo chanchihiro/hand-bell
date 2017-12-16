@@ -63,10 +63,10 @@ body {
 		}
 		#handBell__sound {
 			width: 100%;
-			height: 60vh;
+			height: 100vh;
 			.handbell__image {
 				width: 200px;
-				margin-top: 4em;
+				margin-top: 10em;
 			}
 		}
 		.handBell__sectionRed {
@@ -102,14 +102,19 @@ footer {
 		text-align: center;
 	}
 	ul {
-		width: 120px;
 		margin: 0 auto;
 		overflow: hidden;
 		margin-bottom: 4px;
+		width: 300px;
 		li {
 			text-align: center;
-			float: left;
 			width: 60px;
+			background-color: #fff;
+			width: 100%;
+			text-align: center;
+			box-sizing: border-box;
+			margin-bottom: 10px;
+			padding: 20px 10px;
 			a {
 				text-decoration: none;
 				text-align: center;

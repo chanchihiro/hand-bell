@@ -1,9 +1,11 @@
 footer
  ul
-  li
-   a(href="about.html") 二回目へ
-  li
-   a(href="index.html") トップ
+  if first
+   li
+    a(href="about.html") 二回目へ
+  if notop
+   li
+    a(href="index.html") トップ
  //
   p
    small Copyright 2017 Life is Tech !

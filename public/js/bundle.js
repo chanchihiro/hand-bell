@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // 横に振ったらベルが鳴る
     if (x > 10) {
       if (soundAble) {
-        getAudioBuffer('../se/bell.mp3', function (buffer) {
+        getAudioBuffer(sound, function (buffer) {
           playSound(buffer);
           soundAble = false;
           setTimeout(switchable, 1500);
@@ -90,9 +90,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     // アイフォンの向きをアンドロイドに揃える
     if (userAgent.indexOf("iPhone") > 0 || userAgent.indexOf("iPad") > 0 || userAgent.indexOf("iPod") > 0) {
-      x *= 1;
-      y *= 1;
-      z *= 1;
+      x *= -1;
+      y *= -1;
+      z *= -1;
     }
   });
 });

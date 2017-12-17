@@ -12,61 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
     soundAble = true;
   };
 
-  //audioで音を鳴らすのに使ってた
-  /*
-  function sound() {
-  	soundData.play();
-  	soundData.currentTime = 0 ;
-  	// スマホに対応するために[currentTime]を認識した場合のみ、処理をする
-  if( typeof( sound.currentTime ) != 'undefined' ){
-     soundData.currentTime = 0;
-  }
-  }
-  */
-
-  //色と音を変える時に使っていたやつ
-  /*
-    function change_color_sound() {
-  	if(bell_target.classList.contains('handBell__sectionRed')) {
-  	  bell_target.classList.add('handBell__sectionBlue');
-  	  bell_target.classList.remove('handBell__sectionRed');
-  	  soundData = document.getElementById('sound-file2');
-  	} else if(bell_target.classList.contains('handBell__sectionBlue')){
-  	  bell_target.classList.add('handBell__sectionYellow');
-  	  bell_target.classList.remove('handBell__sectionBlue');
-  	  soundData = document.getElementById('sound-file');
-  	} else if(bell_target.classList.contains('handBell__sectionYellow')){
-  	  bell_target.classList.add('handBell__sectionBlack');
-  	  bell_target.classList.remove('handBell__sectionYellow');
-  	  soundData = document.getElementById('sound-file2');
-  	} else if(bell_target.classList.contains('handBell__sectionBlack')){
-  	  bell_target.classList.add('handBell__sectionWhite');
-  	  bell_target.classList.remove('handBell__sectionBlack');
-  	  soundData = document.getElementById('sound-file');
-  	} else if(bell_target.classList.contains('handBell__sectionWhite')){
-  	  bell_target.classList.add('handBell__sectionPurple');
-  	  bell_target.classList.remove('handBell__sectionWhite');
-  	  soundData = document.getElementById('sound-file2');
-  	} else if(bell_target.classList.contains('handBell__sectionPurple')){
-  	  bell_target.classList.add('handBell__sectionGreen');
-  	  bell_target.classList.remove('handBell__sectionPurple');
-  	  soundData = document.getElementById('sound-file');
-  	} else if(bell_target.classList.contains('handBell__sectionGreen')){
-  	  bell_target.classList.add('handBell__sectionAzure');
-  	  bell_target.classList.remove('handBell__sectionGreen');
-  	  soundData = document.getElementById('sound-file2');
-  	} else if(bell_target.classList.contains('handBell__sectionAzure')){
-  	  bell_target.classList.add('handBell__sectionRed');
-  	  bell_target.classList.remove('handBell__sectionAzure');
-  	  soundData = document.getElementById('sound-file');
-  	}
-    }
-  
-    // 発動する
-    // bell_target.addEventListener('click', sound, false);
-    // btn.addEventListener('click', change_color_sound, false);
-  */
-
   // Web Audio APIの部分を書いていく
   // webkit をつけてクロスブラウザ対応する
   window.AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -112,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // 関数を発動
   window.onload = function () {
     // 音を読み込む
-    getAudioBuffer('../se/bell.mp3', function (buffer) {
+    getAudioBuffer(sound, function (buffer) {
       // 読み込み完了後にボタンにクリックイベントを登録
       bell_target.onclick = function () {
         // 音を再生

@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
     		getAudioBuffer(sound, function(buffer) {
     			playSound(buffer);
   	  			soundAble = false;
-  	  			setTimeout(switchable, 1500);
+  	  			setTimeout(switchable, 500);
     		});
     	}
     }

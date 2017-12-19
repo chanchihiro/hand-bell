@@ -72,8 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let x  = parseFloat(event.acceleration.x);
     let y  = parseFloat(event.acceleration.y);
     let z  = parseFloat(event.acceleration.z);
-    document.getElementById('acc-x').textContent = x;
-    document.getElementById('acc-y').textContent = y;
 
     // 横に振ったらベルが鳴る
     if(x > 10) {

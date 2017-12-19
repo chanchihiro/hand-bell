@@ -74,14 +74,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let z  = parseFloat(event.acceleration.z);
 
     // 横に振ったらベルが鳴る
-    if(x > 6) {
-    	if(soundAble){
-    		getAudioBuffer(sound, function(buffer) {
-    			playSound(buffer);
-  	  			soundAble = false;
-  	  			setTimeout(switchable, 400);
-    		});
-    	}
+    if(x > 6 && soundAble = true) {
+    	getAudioBuffer(sound, function(buffer) {
+    		playSound(buffer);
+  	  		soundAble = false;
+  	  		setTimeout(switchable, 400);
+    	});
     }
     // アイフォンの向きをアンドロイドに揃える
     if (userAgent.indexOf("iPhone") > 0 || userAgent.indexOf("iPad") > 0 || userAgent.indexOf("iPod") > 0) {

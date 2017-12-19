@@ -64,28 +64,25 @@ document.addEventListener('DOMContentLoaded', function() {
   	  		setTimeout(switchable, 400);
   	  	}
   	  }
+  	    //加速度で音を鳴らす部分
+		  window.addEventListener("devicemotion", function(event) {
+		    let x  = parseFloat(event.acceleration.x);
+		    let y  = parseFloat(event.acceleration.y);
+		    let z  = parseFloat(event.acceleration.z);
+
+		    // 横に振ったらベルが鳴る
+		    if(x > 7 && soundAble = true) {
+		    		playSound(buffer);
+		  	  		soundAble = false;
+		  	  		setTimeout(switchable, 500);
+		    }
+		    // アイフォンの向きをアンドロイドに揃える
+		    if (userAgent.indexOf("iPhone") > 0 || userAgent.indexOf("iPad") > 0 || userAgent.indexOf("iPod") > 0) {
+		      x *= -1;
+		      y *= -1;
+		      z *= -1;
+		    }
+		  });
   	});
   }
-
-  //加速度で音を鳴らす部分
-  window.addEventListener("devicemotion", function(event) {
-    let x  = parseFloat(event.acceleration.x);
-    let y  = parseFloat(event.acceleration.y);
-    let z  = parseFloat(event.acceleration.z);
-
-    // 横に振ったらベルが鳴る
-    if(x > 6 && soundAble = true) {
-    	getAudioBuffer(sound, function(buffer) {
-    		playSound(buffer);
-  	  		soundAble = false;
-  	  		setTimeout(switchable, 400);
-    	});
-    }
-    // アイフォンの向きをアンドロイドに揃える
-    if (userAgent.indexOf("iPhone") > 0 || userAgent.indexOf("iPad") > 0 || userAgent.indexOf("iPod") > 0) {
-      x *= -1;
-      y *= -1;
-      z *= -1;
-    }
-  });
 });

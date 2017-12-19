@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
   	  	if(soundAble) {
   	  		playSound(buffer);
   	  		soundAble = false;
-  	  		setTimeout(switchable, 1000);
+  	  		setTimeout(switchable, 400);
   	  	}
   	  }
   	});
@@ -74,12 +74,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let z  = parseFloat(event.acceleration.z);
 
     // 横に振ったらベルが鳴る
-    if(x > 10) {
+    if(x > 6) {
     	if(soundAble){
     		getAudioBuffer(sound, function(buffer) {
     			playSound(buffer);
   	  			soundAble = false;
-  	  			setTimeout(switchable, 300);
+  	  			setTimeout(switchable, 400);
     		});
     	}
     }

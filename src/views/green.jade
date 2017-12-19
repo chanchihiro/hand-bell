@@ -3,6 +3,7 @@ block title
  title= "ハンドベル | 緑"
  - var first = true;
  - var notop = true;
+ - var footer_color = "#01cf00"
  - var second_color = "second_green.html"
  block scripts
   script(type='text/javascript').
@@ -15,8 +16,7 @@ block body
    p https://hand-bell.netlify.com
    img(src="img/qrcode.png", alt="QRコード")
   .handBell__sectionContent
-   #handBell__sound(style="background:#67b62d")
-    p.choice_first 一回目
-    div#circle
+   #handBell__sound(style="background:#01cf00")
+    p.choice_first 一回目 緑
  include _footer
  include _script

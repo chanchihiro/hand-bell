@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
         getAudioBuffer(sound, function (buffer) {
           playSound(buffer);
           soundAble = false;
-          setTimeout(switchable, 500);
+          setTimeout(switchable, 300);
         });
       }
     }

@@ -1,11 +1,12 @@
-footer
+footer(style="background:" + footer_color)
  ul
-  if first
-   li
-    a(href="#{second_color}") 二回目へ
   if notop
    li
-    a(href="index.html") トップ
+    a(href="index.html") ← トップ
+  if first
+   li
+    a(href="#{second_color}") 二回目へ →
+
  //
   p
    small Copyright 2017 Life is Tech !

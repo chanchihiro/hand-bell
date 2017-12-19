@@ -4,6 +4,7 @@ block title
  - var first = true;
  - var notop = true;
  - var second_color = "second_red.html"
+ - var footer_color = "#ff0000"
  block scripts
   script(type='text/javascript').
    var sound = '../se/C3.mp3';
@@ -15,8 +16,7 @@ block body
    p https://hand-bell.netlify.com
    img(src="img/qrcode.png", alt="QRコード")
   .handBell__sectionContent
-   #handBell__sound(style="background:#e63c35")
-    p.choice_first 一回目
-    div#circle
+   #handBell__sound(style="background:#ff0000")
+    p.choice_first 1回目 赤
  include _footer
  include _script

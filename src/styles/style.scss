@@ -4,11 +4,10 @@
 @import "lib/mixins"; //ブレイクポイントの設定
 
 body {
-	font-family: "hiragino", serif;
+	font-family: "yugothic", sans-serif;
 	font-size: 14px;
-	background-color: #e4dac7;
-	color: #192f53;
-	height: 100vh;
+	background-color: #000;
+	color: #fff;
 	box-sizing: border-box;
 	@include max-screen($breakpoint-mobile) {
 		font-size: 12px;
@@ -18,6 +17,7 @@ body {
 .handBell__pcView {
 	text-align: center;
 	padding-top: 12em;
+	height: 100vh;
 	img {
 		width: 100px;
 		margin-top: 20px;
@@ -67,10 +67,14 @@ body {
 		}
 		#handBell__sound {
 			width: 100%;
-			height: 100vh;
+			height: 120vh;
 			.choice_first {
 				color: $white;
-				font-size: 24px;
+				font-size: 16px;
+				float: right;
+				font-weight: normal;
+				padding: 10px;
+				text-shadow:#fff 0px 0px 7px, #fff 0px 0px 7px;
 			}
 			#circle {
 				width: 20px;
@@ -108,30 +112,35 @@ body {
 
 footer {
 	width: 100%;
-	bottom: 8px;
-	position: absolute;
 	p {
 		text-align: center;
 	}
 	ul {
 		margin: 0 auto;
 		overflow: hidden;
-		margin-bottom: 4px;
-		width: 300px;
+		width: 100%;
 		li {
 			text-align: center;
-			width: 60px;
-			background-color: #fff;
-			width: 100%;
-			text-align: center;
+			width: 160px;
+			background-color: rgba(255,255,255,0.3);
 			box-sizing: border-box;
 			margin-bottom: 10px;
+			border-radius: 80px;
+			border: 2px #fff solid;
+			&:first-child {
+				float: left;
+				margin-left: 10px;
+			}
+
+			&:last-child {
+				float: right;
+				margin-right: 10px;
+			}
 			a {
 				text-decoration: none;
-				text-align: center;
-				color: #192f53;
+				color: #fff;
 				display: block;
-				padding: 20px 10px;
+				padding: 10px 10px;
 			}
 		}
 	}

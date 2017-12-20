@@ -3,6 +3,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   var bell_target = document.getElementById('handBell__sound');
+  var loading = document.getElementById('loading');
   // let button = document.getElementById('btn');
   var soundData = document.getElementById('sound-file');
   var soundAble = true;
@@ -33,9 +34,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     };
-
+    console.log("読み込んだ！");
     req.open('GET', url, true);
     req.send('');
+    console.log(loading);
+    loading.classList.add("none");
   };
 
   // 音を再生

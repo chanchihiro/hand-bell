@@ -124,13 +124,12 @@ body {
           float: right;
           font-weight: normal;
           padding: 10px;
-          text-shadow: #fff 0px 0px 7px, #fff 0px 0px 7px, #fff 0px 0px 7px; }
-        .handBell__sectionContent #handBell__sound #circle {
-          width: 20px;
-          height: 20px;
-          margin: 0 auto;
-          border: 3px solid #fff;
-          border-radius: 100%; }
+          text-shadow: #fff 0px 0px 7px, #fff 0px 0px 7px, #fff 0px 0px 7px;
+          position: relative; }
+          .handBell__sectionContent #handBell__sound .choice_first #icon {
+            width: 24px;
+            position: absolute;
+            left: -16px; }
         .handBell__sectionContent #handBell__sound .handbell__image {
           width: 200px;
           margin-top: 10em; }

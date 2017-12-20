@@ -75,13 +75,12 @@ body {
 				font-weight: normal;
 				padding: 10px;
 				text-shadow:#fff 0px 0px 7px, #fff 0px 0px 7px, #fff 0px 0px 7px;
-			}
-			#circle {
-				width: 20px;
-				height: 20px;
-				margin: 0 auto;
-				border: 3px solid #fff;
-				border-radius: 100%;
+				position: relative;
+				#icon {
+					width: 24px;
+					position: absolute;
+					left: -16px;
+				}
 			}
 			.handbell__image {
 				width: 200px;

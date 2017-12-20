@@ -49,9 +49,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // 2回鳴っちゃうのとかのロック時間を設定
     // playing = true;
     // window.setTimeout(function(){ playing = false; }, locktime);
+    soundAble = false;
+    setTimeout(switchable, 2000);
+
     source.loop = false;
     // 再生
-    source.start(0);
+    source.start();
   };
 
   // 関数を発動
@@ -63,36 +66,28 @@ document.addEventListener('DOMContentLoaded', function () {
         // 音を再生
         if (soundAble) {
           playSound(buffer);
-          soundAble = false;
-          setTimeout(switchable, 400);
         }
       };
+
+      //加速度で音を鳴らす部分
+      window.addEventListener("devicemotion", function (event) {
+        var x = parseFloat(event.acceleration.x);
+        var y = parseFloat(event.acceleration.y);
+        var z = parseFloat(event.acceleration.z);
+
+        // 横に振ったらベルが鳴る
+        if (x > 8 && soundAble) {
+          playSound(buffer);
+        }
+        // アイフォンの向きをアンドロイドに揃える
+        if (userAgent.indexOf("iPhone") > 0 || userAgent.indexOf("iPad") > 0 || userAgent.indexOf("iPod") > 0) {
+          x *= -1;
+          y *= -1;
+          z *= -1;
+        }
+      });
     });
   };
-
-  //加速度で音を鳴らす部分
-  window.addEventListener("devicemotion", function (event) {
-    var x = parseFloat(event.acceleration.x);
-    var y = parseFloat(event.acceleration.y);
-    var z = parseFloat(event.acceleration.z);
-
-    // 横に振ったらベルが鳴る
-    if (x > 6) {
-      if (soundAble) {
-        getAudioBuffer(sound, function (buffer) {
-          playSound(buffer);
-          soundAble = false;
-          setTimeout(switchable, 400);
-        });
-      }
-    }
-    // アイフォンの向きをアンドロイドに揃える
-    if (userAgent.indexOf("iPhone") > 0 || userAgent.indexOf("iPad") > 0 || userAgent.indexOf("iPod") > 0) {
-      x *= -1;
-      y *= -1;
-      z *= -1;
-    }
-  });
 });
 
 },{}]},{},[1]);

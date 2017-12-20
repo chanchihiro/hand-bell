@@ -46,10 +46,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // 2回鳴っちゃうのとかのロック時間を設定
     // playing = true;
     // window.setTimeout(function(){ playing = false; }, locktime);
+  	soundAble = false;
+  	setTimeout(switchable, 2000);
+
     source.loop = false;
   	// 再生
-  	source.start(0);
-  	source.noteon(0);
+  	source.start();
   }
 
   // 関数を発動
@@ -61,8 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
   	  	// 音を再生
   	  	if(soundAble) {
   	  		playSound(buffer);
-  	  		soundAble = false;
-  	  		setTimeout(switchable, 400);
   	  	}
   	  }
 
@@ -73,10 +73,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	    let z  = parseFloat(event.acceleration.z);
 
 	    // 横に振ったらベルが鳴る
-	    if(x > 8 && soundAble = true) {
-	    		playSound(buffer);
-	  	  		soundAble = false;
-	  	  		setTimeout(switchable, 500);
+	    if(x > 8 && soundAble) {
+	    	playSound(buffer);
 	    }
 	    // アイフォンの向きをアンドロイドに揃える
 	    if (userAgent.indexOf("iPhone") > 0 || userAgent.indexOf("iPad") > 0 || userAgent.indexOf("iPod") > 0) {

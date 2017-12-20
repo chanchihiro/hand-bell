@@ -34,11 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     };
-    console.log("読み込んだ！");
     req.open('GET', url, true);
     req.send('');
-    console.log(loading);
-    loading.classList.add("none");
   };
 
   // 音を再生
@@ -65,6 +62,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // 音を読み込む
     getAudioBuffer(sound, function (buffer) {
       // 読み込み完了後にボタンにクリックイベントを登録
+      console.log("読み込んだ！");
+      loading.classList.add("none");
       bell_target.onclick = function () {
         // 音を再生
         if (soundAble) {

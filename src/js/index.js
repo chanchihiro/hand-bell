@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   let bell_target = document.getElementById('handBell__sound');
   let loading = document.getElementById('loading');
-  // let button = document.getElementById('btn');
   let soundData = document.getElementById('sound-file');
   let soundAble = true;
 
@@ -59,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
   	// 音を読み込む
   	getAudioBuffer(sound, function(buffer) {
   	  // 読み込み完了後にボタンにクリックイベントを登録
-  	  console.log("読み込んだ！")
   	  loading.classList.add("none");
   	  bell_target.onclick = function() {
   	  	// 音を再生

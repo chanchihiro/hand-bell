@@ -15,6 +15,8 @@ var buffer = require("vinyl-buffer"); //uglifyするためのもの //今は使�
 var node = require("node-dev");
 var source = require("vinyl-source-stream"); //browserifyとgulpを使用する場合は、vinyl-source-streamで橋渡ししないといけない
 var gcmq = require('gulp-group-css-media-queries'); //メディアクエリをまとめて小さくする
+var cleanCSS = require('gulp-clean-css'); //cssを圧縮する
+
 
 
 
@@ -39,6 +41,7 @@ gulp.task("build", function(){
 		.on("error",errorHandler)
 		.pipe(source('bundle.js'))
 		.pipe(buffer())
+		.pipe(uglify())
 		.pipe(gulp.dest('public/js'));
 	browser.reload();
 });
@@ -70,6 +73,15 @@ gulp.task("sass",function(){
 		.pipe(autoprefixer())
 		.pipe(gulp.dest("public/css"));
 	browser.reload();
+});
+
+
+//CSS圧縮
+gulp.task('minify-css', function() {
+    gulp.src("public/css/style.css")
+        .pipe(cleanCSS())
+        //.pipe(gulp.dest('./dist/css/')); //別ディレクトリ
+        .pipe(gulp.dest('./css')); // overwrite
 });
 
 

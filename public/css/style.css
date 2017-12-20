@@ -132,7 +132,13 @@ body {
             left: -16px; }
         .handBell__sectionContent #handBell__sound #loading {
           width: 140px;
-          transition: all .25s; }
+          transition: all .25s;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto; }
         .handBell__sectionContent #handBell__sound .none {
           display: none;
           transition: all .25s; }

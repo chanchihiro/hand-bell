@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var z = parseFloat(event.acceleration.z);
 
         // 横に振ったらベルが鳴る
-        if (x > 8 && soundAble) {
+        if (x > 10 && soundAble) {
           playSound(buffer);
         }
         // アイフォンの向きをアンドロイドに揃える

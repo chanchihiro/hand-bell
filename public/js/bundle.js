@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // playing = true;
     // window.setTimeout(function(){ playing = false; }, locktime);
     soundAble = false;
-    setTimeout(switchable, 2000);
+    setTimeout(switchable, 500);
 
     source.loop = false;
     // 再生
